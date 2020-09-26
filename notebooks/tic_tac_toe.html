@@ -13117,9 +13117,9 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Reinforcement-Learning:-An-Introduction">Reinforcement Learning: An Introduction<a class="anchor-link" href="#Reinforcement-Learning:-An-Introduction">&#182;</a></h2><p>Reinforcement learning is a machine learning algorithm for general purpose decision making. But before we understand and appreciate this, let's review our decision making process</p>
-<h3 id="Exhibit-1:-Evaluating-decisions-based-on-outcome">Exhibit 1: Evaluating decisions based on outcome<a class="anchor-link" href="#Exhibit-1:-Evaluating-decisions-based-on-outcome">&#182;</a></h3><p><code>World T20 Final 2007</code>: Ace spinner <strong>Harbhajan Singh</strong> had a over left but Dhoni chose medium-pacer <strong>Joginder Sharma</strong> to bowl the last over. <strong>Misbah-ul-Haq</strong> was strong at crease.</p>
+<h3 id="Exhibit-1:-Evaluating-decisions-based-on-outcome">Exhibit 1: Evaluating decisions based on outcome<a class="anchor-link" href="#Exhibit-1:-Evaluating-decisions-based-on-outcome">&#182;</a></h3><p><code>World T20 Final 2007</code>: Ace spinner <strong>Harbhajan Singh</strong> had an over left but Dhoni chose medium-pacer <strong>Joginder Sharma</strong> to bowl the last over. <strong>Misbah-ul-Haq</strong> was strong at crease.</p>
 <p><img src="resources/dhoni_happy.jpg" width="50%" height="50%"></p>
-<p><code>World Cup 2011 India vs South Africa</code>: Ace spinner <strong>Harbhajan Singh</strong> had a over left but Dhoni chose medium-pacer <strong>Ashish Nehra</strong> to bowl the last over. <strong>Robin Peterson</strong> was strong at crease.</p>
+<p><code>World Cup 2011 India vs South Africa</code>: Ace spinner <strong>Harbhajan Singh</strong> had an over left but Dhoni chose medium-pacer <strong>Ashish Nehra</strong> to bowl the last over. <strong>Robin Peterson</strong> was strong at crease.</p>
 <p><img src="resources/dhoni_sad.jpg" width="50%" height="50%"></p>
 <p>Sports critics and media absolutely loved the first decision, and similarly totally rejected the second one.</p>
 <p>Too often we evaluate our past decisions based on the outcomes. We completely forget the situations we were in when the decisions were taken, and the information we had till at the point. The above two decisions are, arguably, very similar. They had very different outcome. And were judged very differently by the public.</p>
@@ -13155,7 +13155,7 @@ div#notebook {
 <li>how to balance risk vs. reward</li>
 </ul>
 <p>The balancing of risk and rewards under uncertainty is another major criteria for a good decision making process</p>
-<h3 id="Exhibit-4:-Multi-arm-bandits">Exhibit 4: Multi-arm bandits<a class="anchor-link" href="#Exhibit-4:-Multi-arm-bandits">&#182;</a></h3><p>A gambler is deciding to play a row of slot machines - each with unknown, but different characteristics (win probability, payout etc.). The problem is how to distribute time and capital among different machines to try and find the best. This is a classifc decision making problem - exploration vs. exploitation</p>
+<h3 id="Exhibit-4:-Multi-armed-bandits">Exhibit 4: Multi-armed bandits<a class="anchor-link" href="#Exhibit-4:-Multi-armed-bandits">&#182;</a></h3><p>A gambler is deciding to play a row of slot machines - each with unknown, but different characteristics (win probability, payout etc.). The problem is how to distribute time and capital among different machines to try and find the best. This is a classifc decision making problem - exploration vs. exploitation</p>
 <p><img src="resources/bandits.jpg" width="50%" height="50%"></p>
 <ul>
 <li>To settle down with the current person you are dating or look for another?</li>
@@ -13269,7 +13269,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -13300,7 +13300,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">board</span> <span class="o">=</span> <span class="n">Board</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span><span class="s1">&#39;O&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
@@ -13330,9 +13330,9 @@ div#notebook {
 
   O  |     |  X  
 -----+-----+-----
-  O  |  X  |  X  
+  O  |  O  |  X  
 -----+-----+-----
-  O  |  X  |  O  
+  X  |  X  |  O  
 
 </pre>
 </div>
@@ -13620,7 +13620,7 @@ V_{0}^\pi(s,a) = \mathbb E\Bigl[\sum_n(\gamma^n.R_{n}(s_{n},a_{n}))|s_{0}=s, a_{
 \end{align}<p>This makes the first term deterministic, so we take this out and the expression becomes</p>
 \begin{align}
 Q_{0}^\pi(s,a) = R_{0}(s,a) + \mathbb E\Bigl[\sum_{n=1}(\gamma^n.R_{n}(s_{n},a_{n}))|s_{0}=s, a_{0}=a,\pi\Bigr]
-\end{align}<h3 id="The-Bellman-Equation">The Bellman Equation<a class="anchor-link" href="#The-Bellman-Equation">&#182;</a></h3><p>Next, we do two simple changes - first, we make the subscript of the value Q to variable time, to make the equation dynamic. Then, we notice that the second part of the above equation is just gamma times the value Q itself. So we recast a dynamic version of the above equation as follows:</p>
+\end{align}<h3 id="The-Bellman-Equation">The Bellman Equation<a class="anchor-link" href="#The-Bellman-Equation">&#182;</a></h3><p>Next, we do two simple changes - first, we change the subscript of the value Q to variable time, to make the equation dynamic explicitly. Then, we notice that the second part of the above equation is just gamma times the value Q itself. So we recast a dynamic version of the above equation as follows:</p>
 \begin{align}
 Q_{t}^\pi(s,a) = R_{t}(s,a) + \gamma.Q_{t+1}^\pi(s,a)
 \end{align}<p>From the above, and from Bellman's <a href="https://en.wikipedia.org/wiki/Bellman_equation">principle of optimality</a>, we claim that to maximize the value we must choose Q such that:</p>
