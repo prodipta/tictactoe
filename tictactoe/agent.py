@@ -170,7 +170,7 @@ class Agent():
                     action = self.best_action(state, board)
                 
                 next_state, reward, terminated = \
-                                board.step(player, action)  
+                                board.step(player, action)
                 q = self.Q[state, action]
                 max_q = self.max_q(next_state)
                 next_q = (1-self.nu)*q + self.nu*(reward + self.gamma*max_q)
